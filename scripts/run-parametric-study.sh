@@ -1,6 +1,5 @@
-#!/bin/bash
-
-# OpenFOAM Parametric Study - Container Environment
+!/bin/bash
+echo "🧪 Running Parametric Study in Container Environment"
 set -e  # Exit if any command fails
 echo "DEBUG: Script started"
 set -x  # trace execution
@@ -120,7 +119,7 @@ main() {
     local total_count=${#reynolds_numbers[@]}
     
     for re in "${reynolds_numbers[@]}"; do
-        echo ""
+        echo "🔄 Running simulation for Re = ${re}"
         log "=== Processing Reynolds number: ${re} ==="
         
         # Create case directory
